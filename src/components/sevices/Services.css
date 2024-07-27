@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rowdies:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.service{
+    width: 100%;
+    height: 50vh;
+    padding: 10px 40px ;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFF0;
+    justify-content: space-between;
+}
+.service .img{
+    width: 48%;
+    height: 40vh;
+    background-color: red;
+    background-image: url('../../images/model2.jpg');
+    
+    background-size:cover ;
+  
+    background-clip: content-box;
+    background-position: center;
+    border-radius: 10px;
+}
+.service .texts{
+    width: 30%;
+    height: 100%;
+   padding-top: 40px;
+    text-align: left;
+    color: white;
+    padding-left: 50px;
+}
+
+.arrival{
+    font-family: "Outfit", sans-serif;
+    font-size: 60px;
+    color:  #D09741 ;
+}
+.new{
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+
+    margin-left: 40px;
+}
+.texts h3,.texts h4{
+    font-weight: 800;
+    font-family: "Rowdies", sans-serif;
+    font-size: 30px;
+    
+}
+.texts h4{
+    margin-left: 110px;
+    color: #D09741 ;
+}
+button{
+    width: 90px;
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
+    border: 2px solid  #C0C0C0 ;
+    background-color: transparent;
+    cursor: pointer;
+}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rowdies:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.swiper {
+ width: 1400px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding-top: 50px;
+    text-align: center;
+  }
+.catogery{
+    width: 100%;
+    height: 47vh;
+}  
+.slide{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(131.83deg, #ffd992 0%,     #FFF7F7 99.21%);
+  width: 250px;
+  text-align: center;
+  height: 250px;
+  border-radius: 16px;
+  position: relative;
+  border-radius:50%;
+  margin-left: 10%;
+  transition: .3s all ease-in-out;
+  cursor: pointer;
+
+    
+}
+.slide:hover{
+    background-image: linear-gradient(131.83deg, #FFF7F7 0%,      #ffd992 99.21%);
+}
+.slide:hover .inner{
+    transform: scale(1.1);
+}
+.slide:first-child{
+    margin-left: 25%;
+}
+.slide::before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background-image: linear-gradient(312.25deg, #ecb76c 0%,     rgba(255, 255, 255, 0) 66.19%);
+    z-index: -1;
+    border-radius:50%;
+    overflow: hidden;
+  }
+  .slide:hover .slide::before{
+    background-image: linear-gradient(47.75deg, #ecb76c 0%,     rgba(255, 255, 255, 0) 66.19%);
+
+  }
+  .inner,.overlay {
+    background-color: #fff;
+    width: 200px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    font-family: "Dancing Script", cursive;
+transform: scale(1);
+    border-radius:50%;
+
+  }
+.overlay{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: "Outfit", sans-serif;
+  color: #242321;
+  font-weight: 700;
+  font-size: 25px;
+  opacity: 0;
+  transition: .3s all ease-in-out;
+}
+.slide:hover .overlay{
+  opacity: 1;
+  transform: scale(1.1);
+
+}
+.catogery h1{
+  margin-left: 7%;
+  font-size: 42px;
+  font-family: "Outfit", sans-serif;
+  margin-top: 40px;
+  position: relative;
+ color:  #333333 ;
+  margin-bottom: 40px;
+ 
+}
+.catogery{
+  display: block;
+  background-color: #FFFFF0;
+}

@@ -1,0 +1,15 @@
+.blog-container{
+    width: 100%;
+    height: 40vh;
+    background-image: url('https://t3.ftcdn.net/jpg/05/48/68/24/360_F_548682456_BWkCeQeH807F24n3i979oIJC4zHCz6TE.jpg');
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:10% 80%;
+    
+}
+.main-blogs{
+    height: 100%;
+    width: 100%;
+}
