@@ -7,12 +7,16 @@
     align-items: center;
 }
 .swiper {
- width: 1400px;
+width: 100%;
     justify-content: center;
     align-items: center;
     height: 300px;
     padding-top: 50px;
     text-align: center;
+ 
+  }
+  .swiper-slide{
+    height: 40%;
   }
 .catogery{
     width: 100%;
@@ -51,23 +55,23 @@
     bottom: -2px;
     left: -2px;
     right: -2px;
-    background-image: linear-gradient(312.25deg, #ecb76c 0%,     rgba(255, 255, 255, 0) 66.19%);
+    background-image: linear-gradient(312.25deg, #FFFFF0 0%,     rgba(255, 255, 255, 0) 66.19%);
     z-index: -1;
     border-radius:50%;
     overflow: hidden;
   }
   .slide:hover .slide::before{
-    background-image: linear-gradient(47.75deg, #ecb76c 0%,     rgba(255, 255, 255, 0) 66.19%);
+    background-image: linear-gradient(47.75deg, #FFFFF0 0%,     rgba(255, 255, 255, 0) 66.19%);
 
   }
   .inner,.overlay {
     background-color: #fff;
-    width: 200px;
+    width: 220px;
     display: flex;
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
-    height: 200px;
+    height: 220px;
     font-family: "Dancing Script", cursive;
 transform: scale(1);
     border-radius:50%;
@@ -75,8 +79,8 @@ transform: scale(1);
   }
 .overlay{
   position: absolute;
-  top: 25px;
-  left: 25px;
+  top: 15px;
+  left: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   font-family: "Outfit", sans-serif;
   color: #242321;
@@ -102,5 +106,34 @@ transform: scale(1);
 }
 .catogery{
   display: block;
-  background-color: #FFFFF0;
+
+}
+@media (max-width: 700.98px){
+  .catogery{
+    width: 100%;
+    height: 40vh;
+  }
+  .swiper{
+    height: 180px;
+  }
+ .slide{
+  width: 150px;
+  height: 150px;
+  
+ }
+ .slides{
+  display: flex;
+  gap: 50%;
+  align-items: center;
+  flex-direction: column;
+ 
+
+ }
+  .inner,.overlay{
+    width: 120px;
+    height: 120px;
+  }
+  .slide:first-child{
+    margin-left: 5%;
+}
 }

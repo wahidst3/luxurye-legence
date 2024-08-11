@@ -1,15 +1,38 @@
 .authentication{
     width: 100%;
     height: 100vh;
- background-image: url('https://t3.ftcdn.net/jpg/05/48/68/24/360_F_548682456_BWkCeQeH807F24n3i979oIJC4zHCz6TE.jpg');
-    padding-top: 30px;
+
+   
     text-align: center;display: flex;
-    flex-direction: column;
+
     align-items: center;
     background-position: center;
     background-clip: content-box;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 10;
+gap: 190px;
+background: #ffe259;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+padding-right: 100px;
+ 
+
+}
+
+.authentication .pr{
+  text-align: left;
+  width: 50%;
+  height: 100vh;
+  background-image: url('https://img.freepik.com/free-vector/account-concept-illustration_114360-5201.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.authentication .pr h1{
+  margin:30px 0;
+  
+  font-size: 42px;
 }
 .button{
     background-color: white;
@@ -28,14 +51,16 @@
    
 }
 .form{
-    width: 25%;
-    margin-top: 6%;
-    position: absolute;
-    left: 37%;
+    width: 28%;
+   position: relative;
+   align-content: center;
+   justify-items: center;
+    
+    
 }
 form h1{
     font-size: 25px;
-    margin-top: 20px;
+   
     margin-bottom: 15px;
 }
 form h5{
@@ -45,14 +70,17 @@ form h5{
 }
 form{
   
-    height: 400px;
+    height: 100%;
     border-radius: 22px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 90px;
+    margin-top: 50px;
     background: white;
     border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
  
 }
 input{
@@ -93,5 +121,76 @@ form p a:last-child{
     form {
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
+    }
+  }
+  .rform{
+    width: 100%;
+    height: 100vh;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: red;
+  }
+  .rform form {
+    width: 40%;
+    height: 100%;
+  display: block;
+  
+    padding: 20px 35px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .rform form  .input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+
+
+  }
+  .rform form  input{
+    width: 80%;
+  }
+  .fl{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  .fl img{
+    width: 20px;
+    height: 20px;
+  }
+ 
+  
+  @media (max-width: 700.98px){
+    .authentication{
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      height: 100%;
+     }
+    .rform,.form{
+      width: 90%;
+      height: 100%;
+      margin-bottom: 50px;
+    }
+    .authentication .pr{
+      width: 100%;
+      height: 30vh;
+     
+    }
+    form p{
+      width: 100%;
+      margin-left: 100px;
+     
+    }
+    .submit{
+      width: 70%;
+      margin-bottom: 10px;
     }
   }

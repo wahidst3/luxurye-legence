@@ -17,6 +17,7 @@
 }
 .field{
     width: 50%; position: relative;
+ 
     
 }
 .search button,.filters button{
@@ -58,3 +59,50 @@
     width: 25px;
     height: 25px;
 }
+@media (max-width: 700.98px){  
+    .search{
+     
+        padding: 0;
+        
+    }
+   
+    .field{
+        width: 80%;
+      
+     height: 40px;
+       
+      
+    }
+    .field button{
+        width: 50px;
+        right: 0;
+        padding: 0;
+        height: 39px;
+      
+    }
+    .field button img{
+        width: 23px;
+        
+        
+    }
+    .search input {
+        width: 100%;
+        padding-right: 60px;
+        height: 40px;
+    }
+    .filters{
+        padding: 10px 20px;
+        margin: 0;
+        width: 100%;
+        gap: 10px;
+        overflow-x: scroll;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+   
+   
+
+
+
+ }

@@ -12,21 +12,10 @@ import { delay, motion } from "framer-motion"
 const Hero = () => {
   const hero = useRef(null);
   const loader = useRef(null);
-  setInterval(() => {
-    loader.current.style.display = "none";
-  }, 4000);
-  setInterval(() => {
-    hero.current.style.display = "flex";
-    setTimeout(() => {
-      hero.current.style.opacity = 1;
-    }, 50);
-  }, 4000);
+ 
   return (
     <>
-      <div ref={loader} className="start">
-        <img src={logo} alt="" />
-        <div className="spinner"></div>
-      </div>
+     
       <div ref={hero} className="hero">
         <div  className="text">
           <h1>

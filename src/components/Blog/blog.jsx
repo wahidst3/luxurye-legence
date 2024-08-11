@@ -27,21 +27,21 @@ const Blog = () => {
       ];
       
   return (<div className='main-blogs'>
-  <div className="blog-container"> <h1 style={{marginLeft:'55px',fontSize:'45px',color:'white'}}>Popular Blogs</h1>
+ <h1 >Popular Blogs</h1>
 
  
-    <div style={styles.container} className='blogContainer'>
+    <div  className='blogContainer'>
       {blogPosts.map((post) => (
-        <div key={post.id} style={styles.post}>
-          <img src={post.src} style={styles.img}/>
-          <h2 style={styles.title}>{post.title}</h2>
-          <p style={styles.content}>{post.summary}</p>
+        <div key={post.id}  className='blogPost'>
+          <img src={post.src}className='img'/>
+          <h2 className='title'>{post.title}</h2>
+          <p className='content'>{post.summary}</p>
         </div>
         
       ))}
     </div>
     </div>
-    </div>
+    
   
       
    
@@ -49,40 +49,3 @@ const Blog = () => {
 }
 
 export default Blog
-const styles = {
-    container: {
-      padding: '20px',
-     marginTop:'90px',
-      width:'100%',
-      display:'flex',
-      gap:15,
-      justifyContent:'center',
-      flexWrap:'wrap'
-      
-    },
-    post: {
-      marginBottom: '20px',
-      padding: '15px',
-      border: '1px solid #ccc',
-      borderRadius: '5px',
-      backgroundColor: '#f9f9f9',
-      width:'23%',
-      zIndex:10,
-      flex:2
-    },
-    title: {
-      fontSize: '18px',
-      fontWeight: 'bold',
-      marginBottom: '10px',
-    },
-    content: {
-      fontSize: '16px',
-      color: '#333',
-      height:80,
-      overflow:'hidden'
-    },
-    img:{
-      width:'100%',
-      height:290
-    }
-  };

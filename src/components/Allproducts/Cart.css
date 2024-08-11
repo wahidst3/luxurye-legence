@@ -1,0 +1,102 @@
+.cart{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   
+}
+.cart .btn-con .link{
+    width: 20%;
+    padding: 10px;
+    font-size: 22px;
+    background-color: black;
+text-align: center;
+cursor: pointer;
+
+
+}
+.cart h1{
+    font-size: 45px;
+    text-align: center;
+    padding: 30px;
+}
+.cart-item{
+    width: 40%;
+    display: flex;
+    align-items: center;
+  margin-left: 60px;
+   height: 170px;
+    padding: 20px;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 20px;
+    gap: 20px;
+  
+}
+.cart-item img{
+    width: 100% ;
+    height:130px;
+    border-radius: 12px;
+}
+.cart-item button{
+  background-color: transparent;
+  border: 2px solid black;
+    width: 120px;
+    border-radius: 4px;
+    color: black;
+
+   
+}
+.cart-item .img{
+    width: 22%;
+  
+    height: 130px;
+}
+
+.cart-items{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+
+
+  padding: 0 100px;
+
+ padding-bottom: 100px;
+ margin-bottom: 30px;
+   
+}
+.btn-con{
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px ;
+    justify-content: center;
+    gap: 40px;
+    background-color: white;
+    margin-top: 30px;
+}
+.btn-con button{
+    width: 70%;
+}
+.btn-con span{
+    font-size: 22px;
+    margin-left: 20px;
+    color: white;
+}
+.pay{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+.pay h2{
+    font-size: 30px;
+    
+}
+.cart .empty{
+    width: 30%;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+}

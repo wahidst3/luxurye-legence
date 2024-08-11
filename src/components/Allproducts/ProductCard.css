@@ -33,7 +33,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -43,7 +43,9 @@ body {
     transition: transform 0.3s ease;
 }
 
-
+.card:hover .card>img{
+    transform: scale(1.2);
+}
 
 .card-content {
    height: 110px;
@@ -58,9 +60,7 @@ body {
     transition: color 0.3s ease;
 }
 
-.card:hover .card-title {
-    color: #b58338; /* Slightly darker gold */
-}
+
 
 .card-description {
     font-size: 0.9em;
@@ -92,4 +92,35 @@ body {
 .card-button:hover {
     background-color: #b58338; /* Slightly darker gold */
     transform: translateY(-3px);
+}
+@media (max-width: 700.98px){
+    .card{
+        width: 47%;
+        margin: 1%;
+        padding: 1%;
+        height: 380px;
+    }
+    .card img{
+      height: 190px;
+     
+    }
+    .card-title{
+        font-size: 18px;
+        width: 100%;
+       
+    }
+    .card-description{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .card-price{
+        font-size: 10px;
+    }
+    .card-button {
+        width: 100px;
+        font-size: 16px;
+    }
+    .card-content{
+        padding: 0 10px;
+    }
 }

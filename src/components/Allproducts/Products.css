@@ -3,7 +3,24 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
 }
 .phead{
     margin-left: 100px;
+}
+@media (max-width: 700.98px){
+    .phead{
+        text-align: center;
+        font-size: 27px;
+     
+        padding: 0;
+        margin: 20px 0;
+
+    }
+    .products{
+        margin: 10px 4px ;
+       
+    }
+    
+
 }

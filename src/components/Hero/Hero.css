@@ -5,16 +5,22 @@
     box-sizing: border-box;
 
 }
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
 .hero{
     width: 100%;
     position: relative;
   height: 90vh;
-  display: none;
+  display: flex;
   background-position: center;
     gap: 15%;
     overflow: hidden;
  /* background-image: url('../images/model1.jpg');*/
-opacity:0;
+
  transition: opacity 1s ease-in-out;
     background: #6e6a5b;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
@@ -85,11 +91,11 @@ span{
  }
  @media (max-width: 575.98px){
     .hero{
-        width: 100vw;
+        width: 100%;
         
-       gap: 18px;
+      
        
-        height: 80vh;
+        height: 92vh;
         padding: 50px 0 0 0
     }
     .s2{
@@ -123,16 +129,17 @@ span{
         display: block;
        
     }
+    
  }
 
  @media (min-width: 576px) and (max-width: 767.98px) {
 
 .hero{
-        width: 100vw;
+        width: 100%;
         
        gap: 18px;
        
-        height: 80vh;
+        height: 90vh;
         padding: 50px 0 0 0
     }
     .s2{
@@ -143,6 +150,7 @@ span{
         width: 60%;
         margin-left: 30px;
         flex: 2;
+        text-align: center;
       
     }
     .hero .text h1{
@@ -159,6 +167,7 @@ span{
         display: block;
         font-size: 15px;
         padding-right: 50px;
+        text-align: center;
     }
     .hero img{
         width: 200px;
@@ -167,4 +176,9 @@ span{
        
     }
 
+}
+@media (max-width: 475.98px){
+    .hero img{
+        display: none;
+    }
 }

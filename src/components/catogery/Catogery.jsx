@@ -13,7 +13,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default () => {
   const catogery=useRef(null)
@@ -23,16 +24,29 @@ export default () => {
       nav.current.style.opacity = 1;
     }, 50)
   }, 4000);**/
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 400);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 400);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   return (
     
     <div ref={catogery} className="catogery">
-      <h1> Top <span>Catogery</span></h1>
+      <h1> Top Catogery</h1>
     <Swiper
       // install Swiper 
     
       modules={[ Pagination, A11y]}
-      spaceBetween={50}
-      slidesPerView={4}
+      spaceBetween={isMobileView ?20:50}
+    slidesPerView={isMobileView ?2:3}
       autoplay={{ delay: 1000 }}
 
      
@@ -40,8 +54,9 @@ export default () => {
       
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+      className='slides'
     >
-      <SwiperSlide><motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={jewellery} className='inner' alt="" /><div className="overlay">Jewllery</div></motion.div></SwiperSlide>
+    <SwiperSlide> <Link to='/j'> <motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={jewellery} className='inner' alt="" /><div className="overlay">Jewllery</div></motion.div></Link></SwiperSlide>
       <SwiperSlide><motion.div  animate={{ x: [0, 120, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:7}} className="slide"><img src={woman} className='inner' alt="" /><div className="overlay">Women Cloths</div></motion.div></SwiperSlide>
       <SwiperSlide><motion.div  animate={{ y: [0, 90, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:8}} className="slide"><img src={man} className='inner' alt="" /><div className="overlay">Men cloths</div></motion.div></SwiperSlide>
       <SwiperSlide><motion.div  animate={{ x: [0, 160, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:9}} className="slide"><img src= {shoes}className='inner' alt="" /><div className="overlay">Sneakers</div></motion.div></SwiperSlide>

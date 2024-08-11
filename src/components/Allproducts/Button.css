@@ -61,3 +61,14 @@
     transform: scale(0.95);
     transition-duration: .5s;
   }
+  @media (max-width: 700.98px){
+    .CartBtn {
+      width: 85px;
+      height: 30px;
+      font-size: 9px;
+    }
+     .IconContainer{
+      width: 10px;
+     }
+   
+  }

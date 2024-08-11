@@ -1,204 +1,64 @@
-import React from 'react'
-import ProductCard from './ProductCard'
-import './Products.css'
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import Search from './Search/Search';
-const products = [
-  {
-      title: 'Luxury Silk Dress',
-      description: 'A beautiful silk dress perfect for evening events.',
-      price: '$1500',
-      imageUrl: 'https://d32z0ut2mdx6xx.cloudfront.net/eyJidWNrZXQiOiJ1bmdlci5zdGFnZSIsImtleSI6Im1lZGlhXC9pbWFnZVwvOWVcL2JkXC84YlwvMjEwMDAwNjQzNjg5MV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MjQwMCwiaGVpZ2h0IjoyNDAwLCJmaXQiOiJpbnNpZGUifSwid2VicCI6eyJxdWFsaXR5Ijo5MCwibG9zc2xlc3MiOmZhbHNlLCJmb3JjZSI6dHJ1ZX19fQ=='
-  },
-  {
-      title: 'Diamond Necklace',
-      description: 'An elegant diamond necklace with a stunning design.',
-      price: '$5000',
-      imageUrl: 'https://www.naturaldiamonds.com/wp-content/uploads/2023/05/EPD_AUC_Sothebys-Magnificent-Geneva-May_necklace_IMG_1x1.jpg?w=1080'
-  },
-  {
-      title: 'Luxury Lipstick Set',
-      description: 'A set of luxurious lipsticks in various shades.',
-      price: '$120',
-      imageUrl: 'https://m.media-amazon.com/images/I/91wVsCmF8DL._AC_UF1000,1000_QL80_.jpg'
-  },
-  {
-      title: 'Designer Heels',
-      description: 'High-end designer heels with exquisite craftsmanship.',
-      price: '$800',
-      imageUrl: 'https://hannabigail.com/cdn/shop/products/product-image-1432327436.jpg?v=1643990902&width=2048'
-  },
-  {
-      title: 'Luxury Fragrance',
-      description: 'A unique fragrance that captivates and mesmerizes.',
-      price: '$300',
-      imageUrl: 'https://wwd.com/wp-content/uploads/2023/12/Untitled-1.jpeg?w=1000&h=563&crop=1'
-  },
-  {
-      title: 'Gold Bracelet',
-      description: 'A stunning gold bracelet with intricate details.',
-      price: '$2000',
-      imageUrl: 'https://assets.ajio.com/medias/sys_master/root/20231004/Z1ho/651c8382ddf779151917611a/-473Wx593H-466658498-gold-MODEL5.jpg'
-  },
-  {
-      title: 'Designer Handbag',
-      description: 'A timeless piece of craftsmanship.',
-      price: '$2999',
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCF37uJ0wyAYZNfBDG0RCj3e-fDmIO0Pr8DsNW_IluYJisjeXNGQY_O6hkRqXX7MznOw0&usqp=CAU'
-  },
-  {
-      title: 'Luxury Watch',
-      description: 'An exquisite timepiece with a rich heritage.',
-      price: '$4999',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Cashmere Sweater',
-      description: 'A soft and luxurious cashmere sweater.',
-      price: '$600',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Designer Sunglasses',
-      description: 'Stylish sunglasses with UV protection.',
-      price: '$400',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Foundation',
-      description: 'A high-end foundation for flawless skin.',
-      price: '$80',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Leather Boots',
-      description: 'Premium leather boots with a sleek design.',
-      price: '$750',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Perfume',
-      description: 'A luxurious perfume with a long-lasting scent.',
-      price: '$350',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Pearl Earrings',
-      description: 'Classic pearl earrings for an elegant look.',
-      price: '$1500',
-      imageUrl: 'https://www.francesca.com.au/cdn/shop/files/LULU_WORN_2.jpg?v=1708400451'
-  },
-  {
-      title: 'Designer Wallet',
-      description: 'A stylish wallet made from high-quality leather.',
-      price: '$600',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Mascara',
-      description: 'A high-end mascara for voluminous lashes.',
-      price: '$50',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Suede Loafers',
-      description: 'Elegant suede loafers for a sophisticated look.',
-      price: '$550',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Cologne',
-      description: 'A premium cologne with a unique scent.',
-      price: '$200',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Ruby Ring',
-      description: 'A beautiful ring adorned with a stunning ruby.',
-      price: '$4000',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Silk Scarf',
-      description: 'A luxurious silk scarf with elegant patterns.',
-      price: '$250',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Blush',
-      description: 'A high-end blush for a radiant glow.',
-      price: '$45',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Leather Jacket',
-      description: 'A premium leather jacket with a timeless design.',
-      price: '$1500',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Skincare Set',
-      description: 'A set of luxurious skincare products for glowing skin.',
-      price: '$300',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Gold Earrings',
-      description: 'Elegant gold earrings with a modern design.',
-      price: '$1200',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Silk Blouse',
-      description: 'A luxurious silk blouse perfect for any occasion.',
-      price: '$700',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Hair Oil',
-      description: 'A premium hair oil for healthy, shiny hair.',
-      price: '$60',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Leather Belt',
-      description: 'A high-quality leather belt with a sleek design.',
-      price: '$200',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Luxury Face Serum',
-      description: 'A high-end face serum for youthful skin.',
-      price: '$150',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Platinum Cufflinks',
-      description: 'Elegant platinum cufflinks for formal occasions.',
-      price: '$1800',
-      imageUrl: 'https://via.placeholder.com/300'
-  },
-  {
-      title: 'Designer Sandals',
-      description: 'Stylish designer sandals for a chic look.',
-      price: '$400',
-      imageUrl: 'https://via.placeholder.com/300'
-  }
-];
+import './ProductCard.css';
+import './Products.css';
+import './Button.css';
+import sound from '../../assets/ab.wav'
+import CartContext from '../../Acontext';
+const playSound = () => {
+  const audio = new Audio(sound);
+  audio.play();
+};
+const Product = ({ items, login, setLogin }) => {
+  const { cart, setCart } = useContext(CartContext);
+  const token = localStorage.getItem('authToken');
 
-const Products = () => {
+  const addToCart = (id, price, title, description, imageUrl) => {
+    const obj = { id, price, title, description, imageUrl };
+    setCart([...cart, obj]);
+    console.log("Cart element = ", cart);
+    playSound()
+  };
+
+  const handleProduct = (product) => {
+    if (token) {
+      addToCart(product.id, product.price, product.title, product.description, product.imageUrl);
+    } else {
+      alert("Please login to add items to the cart");
+    }
+  };
+
   return (
     <>
-    <h1 className='phead'>Trending Products</h1>
-    <Search/>
-    
-    <div className='products'>
-    
-      {products.map((product, index) => (
-        
-    <ProductCard key={index} product={product} />
-))}
-    </div></>
-  )
-}
+      <h1 className='phead'>Trending Products</h1>
+      <Search />
+      <div className='products'>
+        {items.map((product) => (
+          <div className="card" key={product.id}>
+            <Link to={`/product/${product.id}`}>
+              <img className='img' src={product.imageUrl} alt={product.title} />
+            </Link>
+            <div className="card-content">
+              <h2 className="card-title">{product.title}</h2>
+              <p className="card-description">{product.description}</p>
+              <div className="bcont">
+                <p className="card-price">{product.price}$</p>
+                <button className="CartBtn" onClick={() => handleProduct(product)}>
+                  <span className="IconContainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" className="cart">
+                      <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                    </svg>
+                  </span>
+                  <p className="text">Add to Cart</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
 
-export default Products
+export default Product;
