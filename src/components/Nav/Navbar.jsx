@@ -119,7 +119,7 @@ function Navbar({login,setLogin}) {
               </p>
               <p  className="navList-item" onClick={handleuser} >
                 <img src='
-                  /assets/home-solid.svg'  /> 
+                  assets/home-solid.svg'  /> 
                 Profile
               </p>
               <p  className="navList-item" onClick={handleLogout} >
