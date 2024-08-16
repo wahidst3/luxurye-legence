@@ -102,7 +102,7 @@ function Navbar({login,setLogin}) {
           <div className='navContainer' style={{ right: showNav ? '0px' : '-300px' }}>
           
               <p  className="navList-item" >
-                <img src='/src/assets/home-solid.svg'  /> 
+                <img src='./assets/home-solid.svg'  /> 
                 Home
               </p>
               <p  className="navList-item" >
