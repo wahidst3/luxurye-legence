@@ -4,6 +4,10 @@ import logo from '../../assets/le.png';
 import userIcon from '../../assets/user-solid.svg';
 import cart from '../../assets/cart.svg';
 import language from '../../assets/globe.svg';
+import Home from "../../assets/home-solid.svg"
+import Product from "../../assets/gift-solid.svg"
+import Logout from "../../assets/right-to-bracket-solid.svg"
+import Pages from "../../assets/compass-solid.svg"
 import navmenu from '../../assets/bar.svg';
 import { Link, useNavigate, useNavigation } from 'react-router-dom';
 import { auth } from '../firebase'; // Adjust the import according to your file structure
@@ -102,15 +106,15 @@ function Navbar({login,setLogin}) {
           <div className='navContainer' style={{ right: showNav ? '0px' : '-300px' }}>
           
               <p  className="navList-item" >
-                <img src='./assets/home-solid.svg'  /> 
+                <img src={Home}  /> 
                 Home
               </p>
               <p  className="navList-item" >
-                <img src='/src/assets/home-solid.svg'  /> 
+                <img src={Pages}  /> 
                 Pages
               </p>
               <p  className="navList-item" >
-                <img src='/src/assets/home-solid.svg'  /> 
+                <img src={Product}  /> 
               Products
               </p>
               <p  className="navList-item" onClick={handlecart}>
@@ -122,7 +126,7 @@ function Navbar({login,setLogin}) {
                 Profile
               </p>
               <p  className="navList-item" onClick={handleLogout} >
-                <img src='/src/assets/home-solid.svg'  /> 
+                <img src={Logout}  /> 
                 Logout
               </p>
 
