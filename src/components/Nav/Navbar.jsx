@@ -114,11 +114,12 @@ function Navbar({login,setLogin}) {
               Products
               </p>
               <p  className="navList-item" onClick={handlecart}>
-                <img src='/src/assets/home-solid.svg'  /> 
+                <img src={cart}  /> 
                 Cart
               </p>
               <p  className="navList-item" onClick={handleuser} >
-                <img src='/src/assets/home-solid.svg'  /> 
+                <img src='
+                  assets/home-solid.svg'  /> 
                 Profile
               </p>
               <p  className="navList-item" onClick={handleLogout} >
