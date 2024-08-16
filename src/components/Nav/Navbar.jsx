@@ -12,7 +12,7 @@ import navmenu from '../../assets/bar.svg';
 import { Link, useNavigate, useNavigation } from 'react-router-dom';
 import { auth } from '../firebase'; // Adjust the import according to your file structure
 import { signOut } from 'firebase/auth';
-function Navbar({login,setLogin}) {
+function Navbar() {
   const token = localStorage.getItem('authToken');
   const handleLogout = async () => {
     try {
@@ -26,7 +26,7 @@ function Navbar({login,setLogin}) {
   };
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 500);
   const [showNav, setShowNav] = useState(false);
-  const [login ,setLogin]=useState(false)
+  const [login,setLogin]=useState(false)
   const navigate = useNavigate();
   
   const handleNav = () => {

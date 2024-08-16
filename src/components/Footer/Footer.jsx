@@ -1,5 +1,9 @@
 import React from 'react'
 import './Footer.css'
+import Pinterest from '../../assets/icon-pinterest.svg'
+import Insta from '../../assets/icon-instagram.svg'
+import Facebook from '../../assets/icon-facebook.svg'
+import Twitter from '../../assets/icon-twitter.svg'
 const Footer = () => {
   return (
     <footer>
@@ -28,10 +32,10 @@ const Footer = () => {
       <p> <a  href="#">Contact</a></p>
     </div>
     <div className="social ">
-      <img src="images/icon-pinterest.svg" alt="Pinterest"/>
-      <img src="images/icon-twitter.svg" alt="Twitter"/>
-      <img src="images/icon-facebook.svg" alt="Facebook"/>
-      <img src="images/icon-instagram.svg" alt="Instagram"/>
+      <img src={Pinterest} alt="Pinterest"/>
+      <img src={Twitter} alt="Twitter"/>
+      <img src={Facebook} alt="Facebook"/>
+      <img src={Insta} alt="Instagram"/>
     </div>
   </footer>
   )
