@@ -26,10 +26,18 @@ function Navbar({login,setLogin}) {
   };
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 500);
   const [showNav, setShowNav] = useState(false);
+  const [login ,setLogin]=useState(false)
   const navigate = useNavigate();
   
   const handleNav = () => {
     setShowNav(!showNav);
+    if(token){
+      setLogin(true)
+    }
+    else{
+      setLogin(false)
+    }
+   
   };
 
   useEffect(() => {
@@ -53,14 +61,7 @@ function Navbar({login,setLogin}) {
     { name: 'Cart', icon: '/src/assets/cart.svg' },
     { name: 'GLobal', icon: '/src/assets/globe.svg' }
   ];
- const  handleuser=()=>{
-        if(token){
-          alert("You are already Logged in Happy Shopping")
-        }
-        else{
-          navigate('/login')
-        }
-  }
+ 
  const  handlecart=()=>{
         if(token){
           
@@ -121,14 +122,14 @@ function Navbar({login,setLogin}) {
                 <img src={cart}  /> 
                 Cart
               </p>
-              <p  className="navList-item" onClick={handleuser} >
+              <p  className="navList-item" onClick={()=>login ? navigate("./profile"):navigate("./login")} >
                 <img src={userIcon}  /> 
-                Profile
+               {login? "Profile":"Log In"}
               </p>
-              <p  className="navList-item" onClick={handleLogout} >
+           {login?   <p  className="navList-item" onClick={handleLogout} >
                 <img src={Logout}  /> 
                 Logout
-              </p>
+              </p>:""}
 
          
           </div>
