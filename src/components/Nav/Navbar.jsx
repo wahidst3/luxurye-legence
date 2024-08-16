@@ -39,6 +39,16 @@ function Navbar() {
     }
    
   };
+  const handleuser = () => {
+    
+    if(token){
+      alert("already Logged in")
+    }
+    else{
+      navigate("./login")
+    }
+   
+  };
 
   useEffect(() => {
     const handleResize = () => {
