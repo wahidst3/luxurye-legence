@@ -46,13 +46,13 @@ const Search = () => {
           </button>
         </div>
       </div>
-      <div className="filters">
+   { /**   <div className="filters">
         {filterList.map((item, index) => (
           <button key={index} onClick={handleAlert}>
             {item.filter}
           </button>
         ))}
-      </div>
+      </div>*/}
     </>
   );
 };

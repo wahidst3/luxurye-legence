@@ -1,16 +1,49 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Search from './Search/Search';
 import './ProductCard.css';
 import './Products.css';
+import ScrollReveal from 'scrollreveal';
 import './Button.css';
 import sound from '../../assets/ab.wav'
 import CartContext from '../../Acontext';
+import { collection, getDocs,doc,deleteDoc } from "firebase/firestore";
+import { db } from "../../components/firebase";
+
 const playSound = () => {
+  
   const audio = new Audio(sound);
   audio.play();
 };
 const Product = ({ items, login, setLogin }) => {
+  const [product, setProduct] = useState([]);
+  useEffect(() => {
+   
+      ScrollReveal().reveal('.pr ', {
+        duration: 1000,
+        origin: 'bottom',
+        distance: '100px',
+        easing: 'ease-in-out',
+        reset: true
+      });
+    },[]);
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "products"));
+        console.log("Database is ",db)
+        const productList = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProduct(productList);
+      } catch (error) {
+        console.error("Error fetching users: ", error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
   const { cart, setCart } = useContext(CartContext);
   const token = localStorage.getItem('authToken');
 
@@ -34,8 +67,8 @@ const Product = ({ items, login, setLogin }) => {
       <h1 className='phead'>Trending Products</h1>
       <Search />
       <div className='products'>
-        {items.map((product) => (
-          <div className="card" key={product.id}>
+        {product.map((product) => (
+          <div className="card pr" key={product.id}>
             <Link to={`/product/${product.id}`}>
               <img className='img' src={product.imageUrl} alt={product.title} />
             </Link>

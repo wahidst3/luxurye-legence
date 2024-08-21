@@ -37,6 +37,7 @@ export default () => {
     };
   }, []);
   
+
   return (
     
     <div ref={catogery} className="catogery">
@@ -57,11 +58,16 @@ export default () => {
       className='slides'
     >
     <SwiperSlide> <Link to='/j'> <motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={jewellery} className='inner' alt="" /><div className="overlay">Jewllery</div></motion.div></Link></SwiperSlide>
-      <SwiperSlide><motion.div  animate={{ x: [0, 120, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:7}} className="slide"><img src={woman} className='inner' alt="" /><div className="overlay">Women Cloths</div></motion.div></SwiperSlide>
-      <SwiperSlide><motion.div  animate={{ y: [0, 90, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:8}} className="slide"><img src={man} className='inner' alt="" /><div className="overlay">Men cloths</div></motion.div></SwiperSlide>
-      <SwiperSlide><motion.div  animate={{ x: [0, 160, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:9}} className="slide"><img src= {shoes}className='inner' alt="" /><div className="overlay">Sneakers</div></motion.div></SwiperSlide>
-      <SwiperSlide><motion.div  animate={{ y: [0, 180, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src= {bag}className='inner' alt="" /><div className="overlay">Hand Bags</div></motion.div></SwiperSlide>
-      <SwiperSlide><motion.div  animate={{ x: [0, 120, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:7}} className="slide"><img src= {perfume}className='inner' alt="" /><div className="overlay">Fragnances</div></motion.div></SwiperSlide>
+    <SwiperSlide> <Link to='/women'> <motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={woman} className='inner' alt="" /><div className="overlay">Women Dresses</div></motion.div></Link></SwiperSlide>
+    <SwiperSlide> <Link to='/men'> <motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={man} className='inner' alt="" /><div className="overlay">Men Dresses</div></motion.div></Link></SwiperSlide>
+    <SwiperSlide> <Link to='/bage'> <motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={bag} className='inner' alt="" /><div className="overlay">Bags </div></motion.div></Link></SwiperSlide>
+    <SwiperSlide> <Link to='/shoes'> <motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={shoes} className='inner' alt="" /><div className="overlay">Shoes</div></motion.div></Link></SwiperSlide>
+    <SwiperSlide> <Link to='/perfume'> <motion.div  animate={{ y: [0, 110, 0] }} transition={{ repeat: 1,repeatType: "reverse",duration: 1,delay:6}} className="slide"><img src={perfume} className='inner' alt="" /><div className="overlay">Perfumes</div></motion.div></Link></SwiperSlide>
+      <div   className="slide"><img src={woman} className='inner' alt="" /><div className="overlay">Women Cloths</div></div>
+      <div   className="slide"><img src={man} className='inner' alt="" /><div className="overlay">Men cloths</div></div>
+      <div  className="slide"><img src= {shoes}className='inner' alt="" /><div className="overlay">Sneakers</div></div>
+      <div  className="slide"><img src= {bag}className='inner' alt="" /><div className="overlay">Hand Bags</div></div>
+      <div    className="slide"><img src= {perfume}className='inner' alt="" /><div className="overlay">Fragnances</div></div>
       
     </Swiper></div>
   );

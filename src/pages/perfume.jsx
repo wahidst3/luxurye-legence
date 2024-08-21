@@ -19,7 +19,7 @@ const jewllery = () => {
     const catogery='jewellery';
     const [product, setProduct] = useState([]);
   useEffect(()=>{
-    const filterproduct=items.filter((product)=>product.catogery==="j")
+    const filterproduct=items.filter((product)=>product.catogery==="p")
     setProduct(filterproduct)
   },[])
   console.log(product)

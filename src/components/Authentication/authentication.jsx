@@ -2,23 +2,22 @@ import { useEffect, useState } from 'react';
 import './auth.css';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../firebase';
-import { setDoc, doc } from 'firebase/firestore';
+import { setDoc, doc, getDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
-function Authentication({ mlogin, msetLogin }) {
+function Authentication({ admin,setAdmin }) {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [rEmail, setREmail] = useState('');
   const [rPassword, setRPassword] = useState('');
   const [name, setName] = useState('');
   const [login, setLogin] = useState(true);
+  
   const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem('authToken');
-
     if (token) {
-      // User is logged in, redirect to home page
       navigate('/home');
     }
   }, [navigate]);
@@ -32,11 +31,12 @@ function Authentication({ mlogin, msetLogin }) {
         await setDoc(doc(db, 'users', user.uid), {
           email: user.email,
           name: name,
+          role: 'user', // Set the default role as 'user'
         });
         alert(`Registered user: ${user.email}`);
-        const token = user.accessToken; // Get the token from the user object
+        const token = await user.getIdToken(); // Fetch the token
         localStorage.setItem('authToken', token);
-        navigate('/home'); // Navigate after successful registration
+        navigate('/');
       }
     } catch (error) {
       console.log(error.message);
@@ -49,12 +49,24 @@ function Authentication({ mlogin, msetLogin }) {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       const user = userCredential.user;
+
       if (user) {
-        const token = user.accessToken; // Get the token from the user object
-        localStorage.setItem('authToken', token);
-        alert('Logged in Successfully');
-        
-        navigate('/home'); // Redirect to home page after successful login
+        const userDoc = await getDoc(doc(db, 'users', user.uid));
+        if (userDoc.exists()) {
+          const userData = userDoc.data();
+          const token = await user.getIdToken(); // Fetch the token
+          localStorage.setItem('authToken', token);
+
+          if (userData.role === 'admin') {
+            
+            alert('Logged in as Admin');
+            navigate('/admin');
+           
+          } else {
+            alert('Logged in Successfully');
+            navigate('/profile');
+          }
+        }
       }
     } catch (error) {
       console.log(error.message);

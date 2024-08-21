@@ -18,6 +18,7 @@ cursor: pointer;
     font-size: 45px;
     text-align: center;
     padding: 30px;
+    color: rgba(87, 87, 87, 0.685)
 }
 .cart-item{
     width: 40%;
@@ -99,4 +100,48 @@ cursor: pointer;
     display: block;
     margin: auto;
     margin-top: 80px;
+}
+@media (max-width: 700.98px){
+    .cart-item{
+        width: 90%;
+        margin: 0;
+        margin-left: 20px;
+    }
+    .cart-items{
+        padding: 10px;
+        margin: 0;
+    }
+    .info p{
+        display: none;
+    }
+    .info h2{
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    .cart-item .img{
+        width: 40%;
+    }
+    .pay h2{
+        font-size: 18px;
+    }
+    .cart .btn-con .link{
+        width: 40%;
+        font-size: 12px;
+        padding: 0;
+    }
+    .btn-con span{
+        margin: 0;
+        margin-left: 5px;
+        font-size: 19px;
+    }
+    .pay{
+        margin: 0;
+        width: 70%;
+    }
+    .btn-con{
+        border-top: 2px solid rgb(226, 226, 226);
+    }
+    .cart .empty{
+        width: 90%;
+    }
 }

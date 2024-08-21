@@ -81,6 +81,18 @@ function Navbar() {
           alert("You must login to acces this feature")
         }
   }
+ const  handlehome=()=>{
+        
+          navigate('/')
+        
+        
+  }
+ const  handleproduct=()=>{
+        
+          navigate('/product')
+        
+        
+  }
 
   return (
     <>
@@ -116,7 +128,7 @@ function Navbar() {
         {isMobileView && (
           <div className='navContainer' style={{ right: showNav ? '0px' : '-300px' }}>
           
-              <p  className="navList-item" >
+              <p  className="navList-item" onClick={handlehome} >
                 <img src={Home}  /> 
                 Home
               </p>
@@ -124,7 +136,7 @@ function Navbar() {
                 <img src={Pages}  /> 
                 Pages
               </p>
-              <p  className="navList-item" >
+              <p  className="navList-item" onClick={handleproduct} >
                 <img src={Product}  /> 
               Products
               </p>
@@ -132,7 +144,7 @@ function Navbar() {
                 <img src={cart}  /> 
                 Cart
               </p>
-              <p  className="navList-item" onClick={()=>login ? navigate("./profile"):navigate("./login")} >
+              <p  className="navList-item" onClick={()=>login ? navigate("./profile"):navigate("/login")} >
                 <img src={userIcon}  /> 
                {login? "Profile":"Log In"}
               </p>

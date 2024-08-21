@@ -1,59 +1,48 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ProductProvider } from './Productcontext';
+import { CartProvider } from './Acontext';
+import Home from './pages/Home/Home';
+import Cart from './components/Allproducts/Cart';
+import Jewllery from './pages/jewllery';
+import Man from './pages/men';
+import Women from './pages/women';
+import Perfume from './pages/perfume';
+import Authentication from './components/Authentication/authentication';
+import Productdetail from './pages/Detail/Detail';
+import Admin from './pages/admin/admin';
+import Addproduct from './pages/admin/addproduct';
+import Product from './components/Allproducts/Products';
+import Profile from './components/Authentication/Profile'
 
-import Product from '../src/components/Allproducts/Products'
-import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
-import Home from './pages/Home/Home'
-import Cart from './components/Allproducts/Cart'
-import { CartProvider } from './Acontext'
-import { items } from './components/Data'
-import Jewllery from './pages/jewllery'
-import Man from './pages/men'
-import Women from './pages/women'
-import Perfume from './pages/perfume'
-import Hero from './components/Hero/Hero'
-import Letter from './components/newsletter/letter'
-import Navbar from './components/Nav/Navbar'
-import Authentication from './components/Authentication/authentication'
-import Productdetail from './pages/Detail/Detail'
-import Footer from './components/Footer/Footer'
 const App = () => {
-  const [data, setData] = useState([...items])
-  useEffect(() => {
-    alert("This Website is Under development! Some Functions may not Work or Contant may overlap on some screen. We will fix it soon. Thanks Regards:Wahid Ali");
-  }, []);
-  const [login,SetLogin]=useState(false)
-  return (
-    <>
-    <CartProvider>
-      
-    <Router>
+  const [login, SetLogin] = useState(false);
   
-    <Routes>
 
-      { /*<Route path="/" element={<Product  items={data} />} />*/}
+  return (
+    <ProductProvider>
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/admin" element={<Admin />} />
+          
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/addproduct" element={<Addproduct />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/j" element={<Jewllery />} />
+            <Route path="/men" element={<Man />} />
+            <Route path="/women" element={<Women />} />
+            <Route path="/perfume" element={<Perfume />} />
+            <Route path="/product/:id" element={<Productdetail  />} />
+            <Route path="/login" element={<Authentication mlogin={login} msetLogin={SetLogin}  />} />
+          </Routes>
+        </Router>
+      </CartProvider>
+    </ProductProvider>
+  );
+};
 
-
-
- 
-   
-
-    <Route path='/' element={ <Home  items={data}/>}/>
-    <Route path='/home' element={ <Home  items={data} login={login} setLogin={SetLogin}/>}/>
-    <Route path='/cart' element={ <Cart  />}/>
-    <Route path='/j' element={ <Jewllery login={login} setLogin={SetLogin}  />}/>
-    <Route path='/m' element={ <Man  login={login} setLogin={SetLogin}/>}/>
-    <Route path='/w' element={ <Women login={login} setLogin={SetLogin} />}/>
-    <Route path='/p' element={ <Perfume login={login} setLogin={SetLogin} />}/> 
-    <Route path='/product/:id' element={ <Productdetail login={login} setLogin={SetLogin}/>}/> 
-
-    <Route path='/login' element={ <Authentication  mlogin={login} msetLogin={SetLogin}/>}/> 
-    
-    </Routes>
-
-    </Router>
-    </CartProvider>
-    </>
-  )
-}
-
-export default App
+export default App;

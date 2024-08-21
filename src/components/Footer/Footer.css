@@ -63,8 +63,14 @@ footer .list a:hover{
             text-align: center;
         }
         footer .logo{
-            padding: 17% 0;
+            padding:  19% 0;
+            width: 100%;
+    
         }
+        footer .logo h1{
+            font-size: 40px;
+        }
+        
         .list{
             padding-top: 0;
         }
@@ -113,7 +119,8 @@ footer .list a:hover{
     margin: 0;
     text-align: center;
     justify-content: center;
-    margin-left: 60px;
+    gap: 30px;
+    width: 100%;
 }
 
 

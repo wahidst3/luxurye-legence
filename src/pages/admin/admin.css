@@ -1,0 +1,217 @@
+.adminSearch{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 30px;
+   
+}
+.adminSearch img{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.adminSearch input{
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid
+     black;
+     color: black;
+}
+.admin{
+    width: 100%;
+    
+    
+}
+.optionSlider,.toggle{
+    transition: right 1s all ease-in-out;
+    height: 90px;
+    padding: 10px;
+    font-size: 18px;
+    border:2px solid black;
+    color: black;
+    z-index: 10;
+
+}
+.adminMain{
+    display: flex;
+    align-items: center;
+    
+}
+.adminContent{
+    width: 100%;
+    padding: 20px 5%;
+    
+    height:88.3vh;
+    
+}
+
+.toggle{
+    height: 88.3vh;
+    padding: 0;
+    margin: 0;
+}
+.adminMain{
+    width: 100%;
+}
+.adminNav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 30px;
+    width: 100%;
+    padding-left: 0;
+    height: 90px;
+}
+.adminInput {
+    width: 83%;
+    height:50px ;
+}
+.adminIcons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 30px;
+    width: 30%;
+}
+.adminIcons img{
+    width: 30px;
+    height:30px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.stats{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+.stat{
+    width: 20%;
+    height: 150px;
+    border-radius: 20px;
+    padding: 15px;
+    padding-left: 30px;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.stat .page{
+    width: 50px ;
+    height: 50px;
+    background-color: #fdf6ee;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+.stat h1{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.stat .numbers{
+    display: flex;
+    gap: 10px;
+    color: #17D214;
+    align-items: center;
+}
+.stat .numbers img{
+    width: 20px;
+    height: 20px;
+}
+.insights{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.leftins,.rightins{
+    width: 10%;
+    text-align: center;
+}
+
+.leftins{
+    width: 20%;
+    text-align: left
+}
+.table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 100px; /* Adjust the vertical gap here */
+
+    height: 100%;
+    margin-bottom: 40px;
+}
+table{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    
+}
+tr{
+    
+    text-align: center;
+    height: 100%;
+    border-right: 2px solid black;
+    margin-bottom: 100px;
+    
+  
+}
+td{
+    padding: 15px;
+    border-bottom: 2px solid rgb(236, 234, 234);
+    
+}
+td button{
+        background-color: red;
+        outline: none;
+        border: 0;
+}
+.tproducts .insights .leftins h1{
+    font-size: 33px;
+    margin-bottom: 5px;
+}
+
+.tproducts .insights .leftins{
+    width: 50%;
+    
+}
+.tproducts .insights .rightins{
+    gap:30px;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    
+}
+.tproducts .insights .rightins button{
+    background-color: #17D214;
+    outline: none;
+    border: 0;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    width: 170px;
+    height: 45px;
+}
+select{
+    width: 150px;
+    height: 42px;
+    background-color: rgb(253, 232, 193);
+    font-size: 18px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+}
