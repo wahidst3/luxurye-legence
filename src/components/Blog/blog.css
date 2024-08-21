@@ -15,9 +15,9 @@ body{
     flex-wrap: wrap;
     gap: 10px;
 }
-.main-blogs h1{
+.main-blogs h2{
     margin-left: 45px;
-    font-size: 45px;
+    font-size: 55px;
     padding: 20px;
     margin-top:20px;
      width:100%;
