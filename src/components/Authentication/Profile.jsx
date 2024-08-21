@@ -41,6 +41,7 @@ const Profile = () => {
       <h4>Your Profie Page will be Available to You on </h4>
       <h3>23 August 2024</h3>
       <h1>Happy Shopping</h1>
+      <button onClick={() => navigate('/')}>Home</button>
     </div>
   );
 };
