@@ -30,6 +30,7 @@ const jewllery = () => {
       <div className='header'><Link to="/"><span><img src={Back} alt="" /></span></Link> <h1 >Jewlery</h1></div>  
  
         <div className='ds'>
+{product.length>0? 
       {product.map((product)=>{
         return(
             <div className="card" key={product.id}>
@@ -53,7 +54,7 @@ const jewllery = () => {
             </div>
             </div>
         )
-      })}
+      })}:<h1>No Products Found</h1>
       </div>
      
     </div>
