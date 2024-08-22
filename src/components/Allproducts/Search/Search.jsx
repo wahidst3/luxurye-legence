@@ -32,6 +32,18 @@ const Search = () => {
     };
   }, []);
 
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Handle input change
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  // Filter items based on search query
+  const filteredItems = items.filter(item =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   return (
     <>
       <div className='search'>

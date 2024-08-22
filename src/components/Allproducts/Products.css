@@ -5,8 +5,20 @@
     justify-content: center;
     margin-bottom: 40px;
 }
+.moreP{
+    border: none;
+    outline: none;
+}
 .phead{
     margin-left: 100px;
+}
+.moreP img{
+    width: 30px;
+}
+.bdiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 @media (max-width: 700.98px){
     .phead{

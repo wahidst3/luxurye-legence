@@ -19,7 +19,7 @@ const jewllery = () => {
     const catogery='jewellery';
     const [product, setProduct] = useState([]);
   useEffect(()=>{
-    const filterproduct=items.filter((product)=>product.catogery==="women")
+    const filterproduct=items.filter((product)=>product.category==="women")
     setProduct(filterproduct)
   },[])
   console.log(product)
@@ -40,7 +40,7 @@ const jewllery = () => {
               <h2 className="card-title">{product.title}</h2>
               <p className="card-description">{product.description}</p>
               <div className="bcont">
-                <p className="card-price">{product.price}</p>
+                <p className="card-price">{product.price}$</p>
                 <button className="CartBtn" onClick={() => addToCart(product.id, product.price, product.title, product.description, product.imageUrl)}>
                   <span className="IconContainer">
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" className="cart">

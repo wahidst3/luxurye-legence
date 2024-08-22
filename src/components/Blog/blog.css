@@ -15,7 +15,7 @@ body{
     flex-wrap: wrap;
     gap: 10px;
 }
-.main-blogs h2{
+.main-blogs h1{
     margin-left: 45px;
     font-size: 55px;
     padding: 20px;
@@ -32,15 +32,15 @@ body{
     padding: 15px;
     border: '1px solid #ccc';
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color:white;
     width:24%;
     height:470px;
- 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     z-Index:10;
    
   }
   .blogPost .title {
-    font-size: 1%;
+    font-size: 17px;
     font-weight: bold;
     margin-bottom: 10px;
     height: 65px;

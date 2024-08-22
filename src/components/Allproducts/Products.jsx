@@ -1,57 +1,61 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Search from './Search/Search';
+import '../Allproducts/Search/Search.css';
+import search from '../../assets/magnifying-glass-solid.svg';
 import './ProductCard.css';
 import './Products.css';
 import ScrollReveal from 'scrollreveal';
 import './Button.css';
-import sound from '../../assets/ab.wav'
+import sound from '../../assets/ab.wav';
 import CartContext from '../../Acontext';
-import { collection, getDocs,doc,deleteDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../components/firebase";
+import refresh from '../../assets/arrows-rotate-solid.svg';
 
 const playSound = () => {
-  
   const audio = new Audio(sound);
   audio.play();
 };
-const Product = ({ items, login, setLogin }) => {
+
+const Product = ({ login, setLogin }) => {
   const [product, setProduct] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [limit, setLimit] = useState(6);
+
   useEffect(() => {
-   
-      ScrollReveal().reveal('.pr ', {
-        duration: 1000,
-        origin: 'bottom',
-        distance: '100px',
-        easing: 'ease-in-out',
-        reset: true
-      });
-    },[]);
+    ScrollReveal().reveal('.pr', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '100px',
+      easing: 'ease-in-out',
+      reset: true
+    });
+  }, []);
+
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchProducts = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "products"));
-        console.log("Database is ",db)
         const productList = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
         setProduct(productList);
       } catch (error) {
-        console.error("Error fetching users: ", error);
+        console.error("Error fetching products: ", error);
       }
     };
 
-    fetchUsers();
+    fetchProducts();
   }, []);
+
   const { cart, setCart } = useContext(CartContext);
   const token = localStorage.getItem('authToken');
 
   const addToCart = (id, price, title, description, imageUrl) => {
     const obj = { id, price, title, description, imageUrl };
     setCart([...cart, obj]);
-    console.log("Cart element = ", cart);
-    playSound()
+    playSound();
   };
 
   const handleProduct = (product) => {
@@ -62,12 +66,42 @@ const Product = ({ items, login, setLogin }) => {
     }
   };
 
+  const handleLimit = () => {
+    if (limit >= product.length) {
+      alert("No more products to show");
+    } else {
+      setLimit(limit + 6);
+    }
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const filteredProducts = product.filter(item =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <h1 className='phead'>Trending Products</h1>
-      <Search />
+      <div className='search'>
+        <div className="field">
+          <input
+            type="text"
+            placeholder='Search Here'
+            className='Search box'
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+          <button type="button">
+            <img src={search} alt="Search" />
+          </button>
+        </div>
+      </div>
       <div className='products'>
-        {product.map((product) => (
+        {filteredProducts.slice(0, limit).map((product) => (
           <div className="card pr" key={product.id}>
             <Link to={`/product/${product.id}`}>
               <img className='img' src={product.imageUrl} alt={product.title} />
@@ -89,6 +123,9 @@ const Product = ({ items, login, setLogin }) => {
             </div>
           </div>
         ))}
+       <div className="bdiv"> <button className="moreP" onClick={handleLimit}>
+          <img src={refresh} alt="" />
+        </button></div>
       </div>
     </>
   );

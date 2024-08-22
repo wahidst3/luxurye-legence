@@ -107,16 +107,27 @@ cursor: pointer;
         margin: 0;
         margin-left: 20px;
     }
+    .info{
+        height: 170px;
+        justify-content: center;
+        gap: 0;
+    }
     .cart-items{
         padding: 10px;
         margin: 0;
+        margin-bottom: 30px;
+        height: 100vh;
+        
+        overflow: scroll;
+        padding-bottom: 70px;
     }
-    .info p{
+    .info .p{
         display: none;
     }
     .info h2{
         font-size: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .cart-item .img{
         width: 40%;

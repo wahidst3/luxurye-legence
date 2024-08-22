@@ -1,321 +1,257 @@
 export  const  items= [
+      
     {
-      id: 1,
-  
-        title: 'Luxury Silk Dress',
-        description: 'A beautiful silk dress perfect for evening events.',
-        price: 15,
-        catogery:'jewllery',
-        imageUrl: 'https://d32z0ut2mdx6xx.cloudfront.net/eyJidWNrZXQiOiJ1bmdlci5zdGFnZSIsImtleSI6Im1lZGlhXC9pbWFnZVwvOWVcL2JkXC84YlwvMjEwMDAwNjQzNjg5MV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MjQwMCwiaGVpZ2h0IjoyNDAwLCJmaXQiOiJpbnNpZGUifSwid2VicCI6eyJxdWFsaXR5Ijo5MCwibG9zc2xlc3MiOmZhbHNlLCJmb3JjZSI6dHJ1ZX19fQ=='
-    },
-    {    id: 2,
-  
-        title: 'Diamond Necklace',
-        description: 'An elegant diamond necklace with a stunning design.',
-        price: 50,
-        catogery:'jewllery',
-        imageUrl: 'https://www.naturaldiamonds.com/wp-content/uploads/2023/05/EPD_AUC_Sothebys-Magnificent-Geneva-May_necklace_IMG_1x1.jpg?w=1080'
+        id: "400",
+        title: 'newTitle',
+        description: 'Elevate your casual wear with our Classic Grey Hooded Sweatshirt. Made from a soft cotton blend, this hoodie features a front kangaroo pocket, an adjustable drawstring hood, and ribbed cuffs for a snug fit. Perfect for those chilly evenings or lazy weekends, it pairs effortlessly with your favorite jeans or joggers.',
+        price: 90,
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/R2PN9Wq.jpeg',
+        rating: 4
     },
     {
-      id: 3,
-        title: 'Luxury Lipstick Set',
-        description: 'A set of luxurious lipsticks in various shades.',
-        price: 12,
-        catogery:'jewllery',
-        imageUrl: 'https://m.media-amazon.com/images/I/91wVsCmF8DL._AC_UF1000,1000_QL80_.jpg'
+        id: "401",
+        title: 'newTitle',
+        description: 'Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.',
+        price: 79,
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/cSytoSD.jpeg',
+        rating: 4
     },
     {
-      id: 4,
-        title: 'Designer Heels',
-        description: 'High-end designer heels with exquisite craftsmanship.',
-        price: 80,
-        catogery:'j',
-        imageUrl: 'https://hannabigail.com/cdn/shop/products/product-image-1432327436.jpg?v=1643990902&width=2048'
+        id: "402",
+        title: 'Classic Comfort Fit Joggers',
+        description: 'Discover the perfect blend of style and comfort with our Classic Comfort Fit Joggers. These versatile black joggers feature a soft elastic waistband with an adjustable drawstring, two side pockets, and ribbed ankle cuffs for a secure fit. Made from a lightweight and durable fabric, they are ideal for both active days and relaxed lounging.',
+        price: 25,
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/ZKGofuB.jpeg',
+        rating: 4
     },
     {
-      id: 5,
-        title: 'Luxury Fragrance',
-        description: 'A unique fragrance that captivates and mesmerizes.',
-        price: 30,
-        catogery:'j',
-        imageUrl: 'https://wwd.com/wp-content/uploads/2023/12/Untitled-1.jpeg?w=1000&h=563&crop=1'
+        id: "403",
+        title: 'Classic Blue Baseball Cap',
+        description: 'Top off your casual look with our Classic Blue Baseball Cap, made from high-quality materials for lasting comfort. Featuring a timeless six-panel design with a pre-curved visor, this adjustable cap offers both style and practicality for everyday wear.',
+        price: 86,
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/wXuQ7bm.jpeg',
+        rating: 4
     },
     {
-      id:6 ,
-        title: 'Gold Bracelet',
-        description: 'A stunning gold bracelet with intricate details.',
-        price: 20,
-        catogery:'jewllery',
-        imageUrl: 'https://assets.ajio.com/medias/sys_master/root/20231004/Z1ho/651c8382ddf779151917611a/-473Wx593H-466658498-gold-MODEL5.jpg'
-    },
-    {id:7,
-        title: 'Designer Handbag',
-        description: 'A timeless piece of craftsmanship.',
-        price: 29,
-        catogery:'j',
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCF37uJ0wyAYZNfBDG0RCj3e-fDmIO0Pr8DsNW_IluYJisjeXNGQY_O6hkRqXX7MznOw0&usqp=CAU'
-    },
-   
-    {id: 8,
-        title: ' Sunglasses',
-        description: 'Stylish sunglasses with UV protection.',
-        price: 40,
-        catogery:'jewllery',
-        imageUrl: 'https://5.imimg.com/data5/GK/KL/UO/ANDROID-36864709/product-jpeg-500x500.jpg'
-    },
-    {id: 9,
-        title: 'Luxury Foundation',
-        description: 'A high-end foundation for flawless skin.',
-        price: 80 ,
-               catogery:'jewllery',
-        imageUrl: 'https://www.byrdie.com/thmb/QHjruB2aMfBS7CZwHpJ62Kj8Pe8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/byr-full-coverage-foundations-tout-update-c96f27cb28024deabd3425f2501ca3ac.jpg'
-    },
-    {id: 10,
-        title: 'Leather Boots',
-        description: 'Premium leather boots with a sleek design.',
-        price: 75,
-        catogery:'jewllery',
-        imageUrl: 'https://static-01.daraz.pk/p/f2d0919080fc182e1cb2d90890ccc39c.jpg_750x400.jpg_.webp'
-    },
-    {
-      id: 11,
-        title: 'Luxury Perfume',
-        description: 'A luxurious perfume with a long-lasting scent.',
+        id: "404",
+        title: 'Classic Red Baseball Cap',
+        description: 'Elevate your casual wardrobe with this timeless red baseball cap. Crafted from durable fabric, it features a comfortable fit with an adjustable strap at the back, ensuring one size fits all. Perfect for sunny days or adding a sporty touch to your outfit.',
         price: 35,
-        catogery:'j',
-        imageUrl: 'https://miro.medium.com/v2/resize:fit:700/1*nOStuWuObLfaBP-SyGYdJw.png'
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/cBuLvBi.jpeg',
+        rating: 3
     },
-   
-  /** {
-      id: 13,
-      title: "Gold Necklace",
-      imageUrl: "https://www.francesca.com.au/cdn/shop/files/LULU_WORN_2.jpg?v=1708400451",
-      price: 1,",
-      description: "Elegant gold necklace with a polished finish.",
-      catogery: "j"
-  },
-  {
-      id: 14,
-      title: "Diamond Earrings",
-      imageUrl: "https://example.com/images/diamond-earrings.jpg",
-      price: 2,",
-      description: "Classic diamond earrings with brilliant cut diamonds.",
-      catogery: "j"
-  },
-  {
-      id: 15,
-      title: "Silver Bracelet",
-      imageUrl: "https://example.com/images/silver-bracelet.jpg",
-      price: 35
-      description: "Stylish silver bracelet with intricate design.",
-      catogery: "j"
-  },
-  {
-      id: 16,
-      title: "Platinum Ring",
-      imageUrl: "https://www.francesca.com.au/cdn/shop/files/LULU_WORN_2.jpg?v=1708400451",
-      price: 1,",
-      description: "Sleek platinum ring with a modern touch.",
-      catogery: "j"
-  },
-  {
-      id: 17,
-      title: "Emerald Pendant",
-      imageUrl: "https://example.com/images/emerald-pendant.jpg",
-      price: 1,",
-      description: "Stunning emerald pendant set in 18k gold.",
-      catogery: "j"
-  },
-  {
-      id: 18,
-      title: "Pearl Necklace",
-      imageUrl: "https://example.com/images/pearl-necklace.jpg",
-      price: 60
-      description: "Classic pearl necklace with lustrous white pearls.",
-      catogery: "j"
-  },
-  {
-      id: 19,
-      title: "Ruby Bracelet",
-      imageUrl: "https://example.com/images/ruby-bracelet.jpg",
-      price: 80
-      description: "Gorgeous ruby bracelet with a delicate design.",
-      catogery: "j"
-  },
-  {
-      id: 20,
-      title: "Sapphire Earrings",
-      imageUrl: "https://example.com/images/sapphire-earrings.jpg",
-      price: 1,",
-      description: "Elegant sapphire earrings with brilliant blue stones.",
-      catogery: "j"
-  },
-  {
-      id: 21,
-      title: "Opal Ring",
-      imageUrl: "https://example.com/images/opal-ring.jpg",
-      price: 95
-      description: "Mesmerizing opal ring with vibrant color play.",
-      catogery: "j"
-  },
-  {
-      id: 22,
-      title: "Topaz Necklace",
-      imageUrl: "https://example.com/images/topaz-necklace.jpg",
-      price: 70
-      description: "Beautiful topaz necklace with a sparkling finish.",
-      catogery: "j"
-  },
-  {
-      id: 23,
-      title: "Amethyst Earrings",
-      imageUrl: "https://example.com/images/amethyst-earrings.jpg",
-      price: 50
-      description: "Charming amethyst earrings with a deep purple hue.",
-      catogery: "j"
-  },
-  {
-      id: 24,
-      title: "Garnet Ring",
-      imageUrl: "https://example.com/images/garnet-ring.jpg",
-      price: 65
-      description: "Sophisticated garnet ring with a bold red stone.",
-      catogery: "j"
-  },
-  {
-      id: 25,
-      title: "Turquoise Bracelet",
-      imageUrl: "https://example.com/images/turquoise-bracelet.jpg",
-      price: 40
-      description: "Vibrant turquoise bracelet with a unique design.",
-      catogery: "j"
-  },
-  {
-      id: 26,
-      title: "Aquamarine Pendant",
-      imageUrl: "https://example.com/images/aquamarine-pendant.jpg",
-      price: 75
-      description: "Elegant aquamarine pendant with a serene blue color.",
-      catogery: "j"
-  },
-  {
-      id: 27,
-      title: "Jade Necklace",
-      imageUrl: "https://example.com/images/jade-necklace.jpg",
-      price: 90
-      description: "Beautiful jade necklace with a polished green finish.",
-      catogery: "j"
-  },
-  {
-      id: 28,
-      title: "Peridot Earrings",
-      imageUrl: "https://example.com/images/peridot-earrings.jpg",
-      price: 55
-      description: "Chic peridot earrings with a vibrant green stone.",
-      catogery: "j"
-  },
-  {
-      id: 29,
-      title: "Citrine Ring",
-      imageUrl: "https://example.com/images/citrine-ring.jpg",
-      price: 70
-      description: "Sunny citrine ring with a warm, golden hue.",
-      catogery: "j"
-  },
-  {
-      id: 30,
-      title: "Tanzanite Bracelet",
-      imageUrl: "https://example.com/images/tanzanite-bracelet.jpg",
-      price: 85
-      description: "Gorgeous tanzanite bracelet with an exquisite blue color.",
-      catogery: "j"
-  },
-  {
-      id: 31,
-      title: "Chrysoberyl Pendant",
-      imageUrl: "https://example.com/images/chrysoberyl-pendant.jpg",
-      price: 1,",
-      description: "Elegant chrysoberyl pendant with a sparkling greenish-golden hue.",
-      catogery: "j"
-  },
-  {
-      id: 32,
-      title: "Moonstone Necklace",
-      imageUrl: "https://example.com/images/moonstone-necklace.jpg",
-      price: 80
-      description: "Delicate moonstone necklace with a mystical glow.",
-      catogery: "j"
-  },
-  {
-      id: 33,
-      title: "Zircon Earrings",
-      imageUrl: "https://example.com/images/zircon-earrings.jpg",
-      price: 60
-      description: "Brilliant zircon earrings with a dazzling sparkle.",
-      catogery: "j"
-  },
-  {
-      id: 34,
-      title: "Iolite Ring",
-      imageUrl: "https://example.com/images/iolite-ring.jpg",
-      price: 95
-      description: "Elegant iolite ring with a deep, rich blue color.",
-      catogery: "j"
-  },
-  {
-      id: 35,
-      title: "Hematite Bracelet",
-      imageUrl: "https://example.com/images/hematite-bracelet.jpg",
-      price: 30
-      description: "Sleek hematite bracelet with a polished black finish.",
-      catogery: "j"
-  },
-  {
-      id: 36,
-      title: "Lapis Lazuli Pendant",
-      imageUrl: "https://example.com/images/lapis-lazuli-pendant.jpg",
-      price: 70
-      description: "Stunning lapis lazuli pendant with a deep blue color.",
-      catogery: "j"
-  },
-  {
-      id: 37,
-      title: "Malachite Necklace",
-      imageUrl: "https://example.com/images/malachite-necklace.jpg",
-      price: 85
-      description: "Striking malachite necklace with a rich green pattern.",
-      catogery: "j"
-  },
-  {
-      id: 38,
-      title: "Onyx Earrings",
-      imageUrl: "https://example.com/images/onyx-earrings.jpg",
-      price: 50
-      description: "Elegant onyx earrings with a classic black finish.",
-      catogery: "j"
-  },
-  {
-      id: 39,
-      title: "Bloodstone Ring",
-      imageUrl: "https://example.com/images/bloodstone-ring.jpg",
-      price: 65
-      description: "Unique bloodstone ring with a deep, rich color.",
-      catogery: "j"
-  },
-  {
-      id: 40,
-      title: "Tiger's Eye Bracelet",
-      imageUrl: "https://example.com/images/tigers-eye-bracelet.jpg",
-      price: 40
-      description: "Distinctive tiger's eye bracelet with a striking golden-brown hue.",
-      catogery: "j"
-  },
-  {
-      id: 41,
-      title: "Carnelian Pendant",
-      imageUrl: "https://example.com/images/carnelian-pendant.jpg",
-      price: 60
-      description: "Bold carnelian pendant with a vibrant red-orange color.",
-      catogery: "j"
-  }, */ 
-  ];
+    {
+        id: "405",
+        title: 'Classic Olive Chino Shorts',
+        description: 'Elevate your casual wardrobe with these classic olive chino shorts. Designed for comfort and versatility, they feature a smooth waistband, practical pockets, and a tailored fit that makes them perfect for both relaxed weekends and smart-casual occasions. The durable fabric ensures they hold up throughout your daily activities while maintaining a stylish look.',
+        price: 84,
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/UsFIvYs.jpeg',
+        rating: 4
+    },
+    {
+        id: "406",
+        title: 'Classic High-Waisted Athletic Shorts',
+        description: 'Stay comfortable and stylish with our Classic High-Waisted Athletic Shorts. Designed for optimal movement and versatility, these shorts are a must-have for your workout wardrobe. Featuring a figure-flattering high waist, breathable fabric, and a secure fit that ensures they stay in place during any activity, these shorts are perfect for the gym, running, or even just casual wear.',
+        price: 43,
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/eGOUveI.jpeg',
+        rating: 4
+    },
+    {
+        id: "407",
+        title: 'Classic White Crew Neck T-Shirt',
+        description: 'Elevate your basics with this versatile white crew neck tee. Made from a soft, breathable cotton blend, it offers both comfort and durability. Its sleek, timeless design ensures it pairs well with virtually any outfit. Ideal for layering or wearing on its own, this t-shirt is a must-have staple for every wardrobe.',
+        price: 39,
+        category: 'men',
+        imageUrl: 'https://i.imgur.com/axsyGpD.jpeg',
+        rating: 4
+    }
+
+,
+{
+    id: "100",
+    title: 'Long sleeve Jacket',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 150,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 4,quantity:1
+},
+{
+    id: "212",
+    title: 'Jacket with wollen hat',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 65,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3,quantity:1
+},
+{
+    id: "73",
+    title: 'Compact fashion t-shirt',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 55.99,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3,quantity:1
+},
+{
+    id: "40",
+    title: 'Blue jins',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 50,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3,quantity:1
+},
+{
+    id: "59",
+    title: 'Skirts with full setup',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 695,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/1631181/pexels-photo-1631181.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 5,quantity:1
+},
+{
+    id: "56",
+    title: 'Yellow Hoody',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 180,
+    category: 'men',
+    imageUrl: 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 4
+},
+{
+    id: "17",
+    title: 'Black t-shirt for women',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 20,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/2010812/pexels-photo-2010812.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 2
+},
+{
+    id: "83",
+    title: 'Gouwn with Red velvet',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 350,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/2233703/pexels-photo-2233703.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3,quantity:1
+},
+{
+    id: "90",
+    title: 'Pink beauty',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 100,
+    category: 'j',
+    imageUrl: 'https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3,quantity:1
+},
+{
+    id: "106",
+    title: 'Jean\'s stylish Jacket',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 245,
+    category: 'men',
+    imageUrl: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 5,quantity:1
+},
+{
+    id: "121",
+    title: 'Jamdani Saree',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 800,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/3363204/pexels-photo-3363204.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 4,quantity:1
+},
+{
+    id: "152",
+    title: 'Black Jacket',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 140,
+    category: 'men',
+    imageUrl: 'https://images.pexels.com/photos/983497/pexels-photo-983497.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3,quantity:1
+},
+{
+    id: "133",
+    title: 'Black top with jeans',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 120,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/3672825/pexels-photo-3672825.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 4,quantity:1
+},
+{
+    id: "14",
+    title: 'men with bag',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 50,
+    category: 'kids',
+    imageUrl: 'https://images.pexels.com/photos/36029/aroni-arsa-children-little.jpg?auto=compress&cs=tinysrgb&w=600',
+    rating: 2,quantity:1
+},
+{
+    id: "15",
+    title: 'Stylish jeans in lightblue',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 100,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/2738792/pexels-photo-2738792.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 4,quantity:1
+},
+{
+    id: "16",
+    title: 'Unknown horizon',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 350,
+    category: 'men',
+    imageUrl: 'https://images.pexels.com/photos/2866077/pexels-photo-2866077.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 4,quantity:1
+},
+{
+    id: "17",
+    title: 'Light tops',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 120,
+    category: 'j',
+    imageUrl: 'https://images.pexels.com/photos/2010925/pexels-photo-2010925.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3
+},
+{
+    id: "18",
+    title: 'Khakhi jeans',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 190,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/3054973/pexels-photo-3054973.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 4,quantity:1
+},
+{
+    id: "19",
+    title: 'Black full sleeve',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 170,
+    category: 'women',
+    imageUrl: 'https://images.pexels.com/photos/2693849/pexels-photo-2693849.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 3,quantity:1
+},
+{
+    id: "20",
+    title: 'Formal for Men',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 490,
+    category: 'men',
+    imageUrl: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600',
+    rating: 5,quantity:1
+}
+]

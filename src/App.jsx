@@ -14,7 +14,7 @@ import Admin from './pages/admin/admin';
 import Addproduct from './pages/admin/addproduct';
 import Product from './components/Allproducts/Products';
 import Profile from './components/Authentication/Profile'
-
+//import Add from './add'
 const App = () => {
   const [login, SetLogin] = useState(false);
   
@@ -26,6 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Admin />} />
+          { /* <Route path="/add" element={<Add />} />*/}
           
             <Route path="/profile" element={<Profile />} />
             <Route path="/addproduct" element={<Addproduct />} />
