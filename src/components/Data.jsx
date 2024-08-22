@@ -2,7 +2,7 @@ export  const  items= [
       
     {
         id: "400",
-        title: 'newTitle',
+        title: 'Sweat Shirt Grey',
         description: 'Elevate your casual wear with our Classic Grey Hooded Sweatshirt. Made from a soft cotton blend, this hoodie features a front kangaroo pocket, an adjustable drawstring hood, and ribbed cuffs for a snug fit. Perfect for those chilly evenings or lazy weekends, it pairs effortlessly with your favorite jeans or joggers.',
         price: 90,
         category: 'men',
