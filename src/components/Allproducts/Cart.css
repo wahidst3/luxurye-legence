@@ -106,9 +106,10 @@ cursor: pointer;
         width: 90%;
         margin: 0;
         margin-left: 20px;
+
     }
     .info{
-        height: 170px;
+        height: 180px;
         justify-content: center;
         gap: 0;
     }
